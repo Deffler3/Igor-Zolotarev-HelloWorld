@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hello</title>
+</head>
+<body>
+	<div>
+		<h4>Response From API</h4>
+		<div id="msg" />
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script>
+		var uri = 'api/gethello';
+		$(document).ready(function () {
+			$.getJSON(uri)
+				.done(function (data) {
+					$('#msg').text(data);
+					});
+				});
+	</script>
+
+</body>
+</html>
